@@ -1,0 +1,82 @@
+/* FOOTER */
+footer {
+  /* Size */
+  width: 100%;
+  height: 100px;
+
+  /* Display */
+  @include FlexCenter;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-top: 40px;
+
+  /* Font */
+  font-size: CALC(5000vw / 1018);
+  font-family: 'Fjalla One';
+
+  /* Decoration */
+  background-color: $secondary-color_lighter;
+  overflow: hidden;
+
+  @include Phone {
+    /* Font */
+    font-size: CALC(8000vw / 1018);
+
+    /* Layout */
+    margin-top: 10px;
+  }
+  @include SmallPhone {
+    /* Font */
+    font-size: CALC(10000vw / 1018);
+
+    /* Layout */
+    margin-top: 10px;
+  }
+
+  & a {
+    /* Size */
+    box-sizing: border-box;
+
+    /* Layout */
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* Animation */
+    @include infiniteRotation;
+
+    &:hover {
+      /* Font */
+      color: $tertiary-color;
+    }
+  }
+  & .whiteLink {
+    /* Font */
+    color: white;
+    text-shadow: 1px 1px 1px $text-color;
+
+    &:hover {
+      /* Font */
+      text-shadow: unset;
+    }
+  }
+}
+
+/* ANIMATIONS */
+@keyframes infiniteRotation {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(700px);
+  }
+  50% {
+    transform: translate(0px);
+  }
+  75% {
+    transform: translate(-700px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}

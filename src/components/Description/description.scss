@@ -1,0 +1,35 @@
+/* DESCRIPTION */
+.description {
+  width: 90%;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 50px;
+
+  text-align: center;
+  @include BackgroundLinearGradientLighterReverse;
+
+  border-radius: 10px;
+
+  @include Phone {
+    padding: 10px;
+  }
+
+  @include SmallPhone {
+    padding: 10px;
+  }
+
+  & p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include Phone {
+      font-size: 15px;
+    }
+
+    @include SmallPhone {
+      font-size: 12px;
+    }
+  }
+}

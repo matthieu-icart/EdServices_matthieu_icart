@@ -1,0 +1,293 @@
+/* COMPARAISON */
+.comparaison {
+  /* Size */
+  @include NineteenPercent;
+
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  /* Layout */
+  margin: 0 auto;
+
+  /* ALL REALISATIONS */
+  & .navigationButtons {
+    /* Size */
+    @include FullSize;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    /* Layout */
+    margin-top: 20px;
+
+    @include SmallPhone {
+      /* Display */
+      flex-direction: column;
+    }
+
+    & .buttonChoice {
+      /* Size */
+      width: 30%;
+      height: 50px;
+
+      /* Display */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      column-gap: 10%;
+
+      /* Layout */
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      /* Decoration */
+      @include BackgroundLinearGradientGrey;
+      border: 1px solid $text-color;
+      border-radius: 5px;
+
+      @include Phone {
+        /* Font */
+        font-size: 10px;
+      }
+
+      @include SmallPhone {
+        /* Size */
+        width: 90%;
+
+        /* Font */
+        font-size: 10px;
+      }
+
+      &:hover {
+        /* Decoration */
+        @include BackgroundLinearGradientLighter;
+        border: 1px solid $text-color;
+        box-shadow: 3px 3px 3px lightgray;
+
+        /* Animation */
+        @include Shake;
+      }
+
+      & h4,
+      h5 {
+        /* Layout */
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  /* DETAILS OF REALISATION */
+  & .details {
+    /* Display */
+    @include FlexCenter;
+    flex-direction: column;
+    row-gap: 20px;
+
+    /* Layout */
+    margin-top: 20px;
+
+    /* Font */
+    text-align: center;
+
+    & .title {
+      /* Decoration */
+      border-bottom: 0.5px solid $tertiary-color;
+    }
+
+    & .precision {
+      /* Font */
+      font-style: italic;
+      font-size: small;
+    }
+  }
+
+  /* CHANGE PICTURES BUTTONS */
+  & .changePictureButtons {
+    /* Size */
+    @include FullSize;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    /* Layout */
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    & .changePictureButton {
+      /* Size */
+      width: 45%;
+      min-height: 50px;
+
+      /* Layout */
+      padding: 10px;
+
+      /* Decoration */
+      @include BackgroundLinearGradient;
+      border: none;
+      border-radius: 10px;
+
+      &:hover {
+        /* Decoration */
+        @include BackgroundLinearGradientLighterReverse;
+        box-shadow: 3px 3px 3px lightgrey;
+      }
+    }
+  }
+
+  /* PICTURE BLOCK */
+  & .block {
+    /* Size */
+    width: 90%;
+    height: 500px;
+
+    /* Layout */
+    margin: 0 auto;
+    margin-bottom: 80px;
+
+    /* Font */
+    text-align: center;
+
+    & h4 {
+      /* Layout */
+      margin: 0;
+      padding: 0;
+
+      /* Font */
+      font-size: 50px;
+    }
+
+    & img {
+      /* Size */
+      @include FullSize;
+      object-fit: contain;
+
+      @include SmallPhone {
+        /* Size */
+        object-fit: cover;
+      }
+    }
+  }
+
+  & .count {
+    /* Layout */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    /* Font */
+    font-style: italic;
+    font-size: 20px;
+
+    /* Decoration */
+    border-bottom: 0.5px solid $text-color;
+  }
+
+  /* BUTTON BEFORE & AFTER */
+
+  & .afterBefore {
+    @include FullSize;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+  & .buttonBefore {
+    /* Size */
+    width: 45%;
+    height: 50px;
+
+    /* Opacity */
+    opacity: 0.3;
+
+    /* Layout */
+    padding: 10px;
+    margin-bottom: 10px;
+
+    /* Decoration */
+    @include BackgroundLinearGradientGrey;
+    border: none;
+    border-radius: 10px;
+
+    @include Phone {
+      /* Size */
+      height: 50px;
+
+      /* Position */
+      left: 0px;
+      top: 700px;
+    }
+    @include SmallPhone {
+      /* Size */
+      height: 50px;
+
+      /* Position */
+      left: 0px;
+      top: 1025px;
+    }
+
+    &:not(:focus) {
+      /* Opacity */
+      opacity: 1;
+    }
+
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientGreyReverse;
+      box-shadow: 3px 3px 3px lightgrey;
+    }
+  }
+
+  & .buttonAfter {
+    /* Size */
+    height: 50px;
+    width: 45%;
+
+    /* Opacity */
+    opacity: 0.3;
+
+    /* Layout */
+    padding: 10px;
+    margin-bottom: 10px;
+
+    /* Decoration */
+    @include BackgroundLinearGradientGrey;
+    border: none;
+    border-radius: 10px;
+
+    @include Phone {
+      /* Size */
+      height: 50px;
+    }
+
+    @include SmallPhone {
+      /* Size */
+      height: 50px;
+    }
+
+    &:not(:focus) {
+      /* Opacity */
+      opacity: 1;
+    }
+
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientGreyReverse;
+      box-shadow: 3px 3px 3px lightgrey;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.about {
+  width: 90%;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  @include BackgroundLinearGradientLighter;
+
+  &_text {
+    & p {
+      color: $text-color;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    & .link {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+}

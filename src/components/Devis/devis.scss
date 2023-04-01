@@ -1,0 +1,197 @@
+/* STATES */
+.open {
+  /* Display */
+  @include FlexCenter;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+/* DEVIS */
+.devis {
+  /* Size */
+  @include FullSize;
+
+  /* Layout */
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  /* BUTTON DEVIS */
+  & .buttonDevis {
+    /* Size */
+    @include NineteenPercent;
+    height: 70px;
+
+    /* Layout */
+    margin: 0 auto;
+
+    /* Font */
+    font-size: CALC(3000vw / 900);
+
+    /* Decoration */
+    @include BackgroundLinearGradient;
+    border: 1px solid $text-color;
+    border-radius: 5px;
+
+    @include LargePhone {
+      /* Font */
+      font-size: CALC(3000vw / 500);
+    }
+
+    @include Phone {
+      /* Font */
+      font-size: CALC(3000vw / 400);
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: CALC(3000vw / 400);
+    }
+
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientLighter;
+      border: 1px solid $text-color;
+      box-shadow: 3px 3px 3px lightgray;
+
+      /* Animation */
+      @include Shake;
+    }
+  }
+
+  /* BUTTON RETURN */
+  & .buttonReturn {
+    /* Size */
+    @include NineteenPercent;
+    height: 50px;
+
+    /* Display */
+    @include FlexCenter;
+    flex-direction: row;
+    column-gap: 10%;
+
+    /* Layout */
+    margin: 0 auto;
+
+    /* Font */
+    font-size: CALC(3000vw / 900);
+
+    /* Decoration */
+    @include BackgroundLinearGradientGrey;
+    border: 1px solid $text-color;
+    border-radius: 5px;
+
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientLighter;
+      border: 1px solid $text-color;
+      box-shadow: 3px 3px 3px lightgray;
+
+      /* Animation */
+      @include Shake;
+    }
+
+    @include LargePhone {
+      /* Font */
+      font-size: CALC(3000vw / 500);
+    }
+
+    @include Phone {
+      /* Font */
+      font-size: CALC(3000vw / 400);
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: CALC(3000vw / 400);
+    }
+  }
+
+  /* FORMULAIRE */
+  & .contact {
+    /* Size */
+    @include FullSize;
+
+    &_formulaire {
+      /* Size */
+      @include FullSize;
+    }
+
+    /* RESPONSE */
+    &_response {
+      /* Size */
+      @include FullSize;
+
+      /* Layout */
+      margin: 0 auto;
+
+      /* Font */
+      text-align: center;
+    }
+  }
+
+  & form {
+    /* Size */
+    @include NineteenPercent;
+
+    /* Display */
+    @include FlexCenter;
+    flex-direction: column;
+    row-gap: 20px;
+
+    /* Layout */
+    margin: 0 auto;
+
+    /* FORMULAIRE ELEMENTS */
+    & label,
+    input,
+    textarea,
+    .textArea {
+      /* Size */
+      @include FullSize;
+    }
+
+    /* INPUT */
+    & input:focus {
+      /* Decoration */
+      background-color: $secondary-color_lighter;
+    }
+
+    /* TEXTAREA */
+    & .textArea {
+      /* Size */
+      height: 150px;
+
+      /* Layout */
+      margin-bottom: 20px;
+    }
+
+    & textArea:focus {
+      /* Decoration */
+      background-color: $secondary-color_lighter;
+    }
+  }
+}
+
+/* ANIMATIONS */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -2px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 2px, 0);
+  }
+}

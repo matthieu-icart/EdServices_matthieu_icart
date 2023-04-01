@@ -1,0 +1,38 @@
+/* OPERATION */
+.operation {
+  /* Size */
+  @include NineteenPercent;
+
+  /* Display */
+  @include FlexCenter;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  /* IMAGE */
+  &_image {
+    /* Size */
+    width: 30%;
+    height: 100%;
+
+    @include NotDesktop {
+      /* Size */
+      width: 90%;
+    }
+  }
+
+  & img {
+    /* Size */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Decoration */
+    border-radius: 10px;
+  }
+}

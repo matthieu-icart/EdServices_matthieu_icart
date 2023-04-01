@@ -1,0 +1,128 @@
+/* INFOMATION */
+.information {
+  /* Size */
+  @include FullSize;
+
+  /* Display */
+  @include FlexCenter;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  @include SmallPhone {
+    display: none;
+  }
+
+  & NavLink {
+    @include FullSize;
+  }
+
+  /* TEXT */
+  &_text {
+    /* Size */
+    box-sizing: border-box;
+
+    /* Position */
+    z-index: 3;
+
+    /* Layout */
+    margin: 0;
+
+    /* Font */
+    color: $primary-color;
+    text-align: center;
+    font-weight: bolder;
+
+    @include LargePhone {
+      /* Font */
+      font-size: 13px;
+    }
+
+    @include Phone {
+      /* Font */
+      font-size: 8px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 5px;
+    }
+
+    & h2 {
+      /* Layout */
+      margin: 0;
+    }
+  }
+
+  /* BACKGROUND IMAGE */
+  & img {
+    /* Size */
+    width: 80%;
+    height: 250px;
+    object-fit: cover;
+
+    /* Position */
+    position: absolute;
+    left: 10%;
+    z-index: 1;
+
+    /* Layout */
+    margin: 0 auto;
+
+    /* Decoration */
+    border-radius: 20px;
+
+    /* Transform */
+    transform: scale(-1);
+    opacity: 0.5;
+
+    @include LargePhone {
+      /* Font */
+      height: 200px;
+    }
+
+    @include Phone {
+      /* Font */
+      height: 150px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      height: 100px;
+    }
+  }
+}
+
+/* SHADING */
+.shading {
+  /* Size */
+  width: 80%;
+  height: 200px;
+
+  /* Position */
+  position: absolute;
+  left: 10%;
+
+  /* Layout */
+  margin: 0 auto;
+
+  /* Decoration */
+  background-color: black;
+
+  @include LargePhone {
+    /* Font */
+    height: 150px;
+  }
+
+  @include Phone {
+    /* Font */
+    height: 120px;
+  }
+
+  @include SmallPhone {
+    /* Font */
+    height: 60px;
+  }
+}

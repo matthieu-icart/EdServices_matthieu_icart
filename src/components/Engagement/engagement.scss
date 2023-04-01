@@ -1,0 +1,17 @@
+/* ENGAGEMENT */
+.engagement {
+  /* Size */
+  @include NineteenPercent;
+
+  /* Font */
+  text-align: center;
+
+  & li {
+    /* Layout */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /* Font */
+    font-style: italic;
+  }
+}

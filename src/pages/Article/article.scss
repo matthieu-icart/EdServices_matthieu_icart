@@ -1,0 +1,85 @@
+/* ARTICLE */
+.article {
+  /* Size */
+  @include FullSize;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  & .article_buttons {
+    /* Size */
+    @include FullSize;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    /* Layout */
+    margin-top: 20px;
+  }
+
+  & .article_button {
+    /* Size */
+    width: 45%;
+    height: 100%;
+    min-height: 100px;
+
+    /* Layout */
+    padding: 10px;
+
+    /* Decoration */
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 10px;
+
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientLighter;
+    }
+  }
+
+  & article {
+    /* Size */
+    @include FullSize;
+
+    /* Layout */
+    margin-top: 20px;
+
+    /* Font */
+    text-align: center;
+
+    & .text {
+      /* Size */
+      width: 70%;
+
+      /* Layout */
+      margin: 0 auto;
+      padding: 20px;
+
+      /* Decoration */
+      border: 1px solid black;
+    }
+
+    & p {
+      /* Layout */
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      /* Font */
+      text-align: justify;
+
+      @include Phone {
+        font-size: 15px;
+      }
+
+      @include SmallPhone {
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+/* PRESENTATION */
+.presentation {
+  /* Size */
+  width: 90%;
+  height: 100%;
+
+  /* Display */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  /* Layout */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  /* Font */
+  text-align: center;
+
+  /* Decoration */
+  border-bottom: 1px solid $tertiary-color;
+
+  &_block {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include NotDesktop {
+    /* Size */
+    width: 100%;
+
+    /* Display */
+    @include FlexCenter;
+    flex-direction: column;
+  }
+
+  /* ARTICLE */
+  & article {
+    /* Size */
+    width: 30%;
+    box-sizing: border-box;
+
+    /* Layout */
+    padding: 20px;
+
+    /* Decoration */
+    @include BackgroundLinearGradientLighter;
+    border-radius: 10px;
+
+    @include NotDesktop {
+      /* Size */
+      @include NineteenPercent;
+
+      /* Layout */
+      margin-bottom: 20px;
+
+      &:hover {
+        /* Decoration */
+        box-shadow: 3px 3px 3px lightgrey;
+      }
+    }
+
+    /* TITLE */
+    & h2 {
+      /* Font */
+      font-style: bolder;
+
+      /* Layout */
+      padding-bottom: 5px;
+
+      /* Decoration */
+      border-bottom: 1px solid $tertiary-color;
+    }
+
+    & li {
+      /* Layout */
+      margin-top: 20px;
+
+      /* Font */
+      text-align: center;
+    }
+
+    & p {
+      /* Font */
+      text-align: justify;
+      font-style: italic;
+      font-size: 15px;
+
+      @include SmallPhone {
+        /* Font */
+        font-size: 12px;
+      }
+    }
+  }
+}

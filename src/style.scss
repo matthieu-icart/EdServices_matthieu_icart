@@ -1,0 +1,43 @@
+/* UTILS */
+@import './sass/utils/variables.scss';
+@import './sass/utils/mixins.scss';
+
+/* INDEX */
+@import './index.scss';
+
+/* HEADER */
+@import './layout/Header/header.scss';
+/* Components */
+@import './components/Navigation/navigation.scss';
+@import './components/Logo/logo.scss';
+
+/* FOOTER */
+@import './layout/Footer/footer.scss';
+
+/* HOME */
+@import './pages/Home/home.scss';
+/* Components */
+@import './components/InformationBanner/informationBanner.scss';
+@import './components/Presentation/presentation.scss';
+@import './components/Devis/devis.scss';
+@import './components/Engagement/engagement.scss';
+
+/* REALISATION */
+@import './pages/Realisation/realisation.scss';
+/* Components */
+@import './components/Operation/operation.scss';
+@import './components/Renovation/renovation.scss';
+@import './components/Comparaison/comparaison.scss';
+
+/* CONTACT */
+@import './pages/Contact/contact.scss';
+/* Components */
+@import './components/Description/description.scss';
+@import './components/About/about.scss';
+@import './components/Map/map.scss';
+
+/* ARTICLE */
+@import './pages/Article/article.scss';
+
+/* ERROR */
+@import './pages/Error/error.scss';
